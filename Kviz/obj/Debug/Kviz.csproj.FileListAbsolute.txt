@@ -1,0 +1,10 @@
+C:\Users\korisnik\source\repos\Kviz_Ispočetka\Kviz\Kviz\bin\Debug\Kviz.exe.config
+C:\Users\korisnik\source\repos\Kviz_Ispočetka\Kviz\Kviz\bin\Debug\Kviz.exe
+C:\Users\korisnik\source\repos\Kviz_Ispočetka\Kviz\Kviz\bin\Debug\Kviz.pdb
+C:\Users\korisnik\source\repos\Kviz_Ispočetka\Kviz\Kviz\obj\Debug\Kviz.csproj.AssemblyReference.cache
+C:\Users\korisnik\source\repos\Kviz_Ispočetka\Kviz\Kviz\obj\Debug\Kviz.FormaPrijava.resources
+C:\Users\korisnik\source\repos\Kviz_Ispočetka\Kviz\Kviz\obj\Debug\Kviz.Properties.Resources.resources
+C:\Users\korisnik\source\repos\Kviz_Ispočetka\Kviz\Kviz\obj\Debug\Kviz.csproj.GenerateResource.cache
+C:\Users\korisnik\source\repos\Kviz_Ispočetka\Kviz\Kviz\obj\Debug\Kviz.csproj.CoreCompileInputs.cache
+C:\Users\korisnik\source\repos\Kviz_Ispočetka\Kviz\Kviz\obj\Debug\Kviz.exe
+C:\Users\korisnik\source\repos\Kviz_Ispočetka\Kviz\Kviz\obj\Debug\Kviz.pdb
