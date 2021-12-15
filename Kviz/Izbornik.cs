@@ -16,5 +16,10 @@ namespace Kviz
         {
             InitializeComponent();
         }
+
+        private void Izbornik_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
