@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0862744E-48E9-42E9-A864-FA396F9945CA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kviz</RootNamespace>
+    <AssemblyName>Kviz</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algebarski.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Algebarski.Designer.cs">
+      <DependentUpon>Algebarski.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Brojevi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Brojevi.Designer.cs">
+      <DependentUpon>Brojevi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Potencije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Potencije.Designer.cs">
+      <DependentUpon>Potencije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Predmeti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Predmeti.Designer.cs">
+      <DependentUpon>Predmeti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijava.Designer.cs">
+      <DependentUpon>Prijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izbornik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izbornik.Designer.cs">
+      <DependentUpon>Izbornik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PrviMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrviMat.Designer.cs">
+      <DependentUpon>PrviMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrviMatObj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrviMatObj.Designer.cs">
+      <DependentUpon>PrviMatObj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Razred.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Razred.Designer.cs">
+      <DependentUpon>Razred.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Algebarski.resx">
+      <DependentUpon>Algebarski.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izbornik.resx">
+      <DependentUpon>Izbornik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Brojevi.resx">
+      <DependentUpon>Brojevi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Potencije.resx">
+      <DependentUpon>Potencije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Predmeti.resx">
+      <DependentUpon>Predmeti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijava.resx">
+      <DependentUpon>Prijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PrviMat.resx">
+      <DependentUpon>PrviMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrviMatObj.resx">
+      <DependentUpon>PrviMatObj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Razred.resx">
+      <DependentUpon>Razred.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\brojevi1_kviz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brojevi.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brojevnipravac1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brojevi4.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brojevnipravac2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brojevi3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pitanja.txt" />
+    <Content Include="proba.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
