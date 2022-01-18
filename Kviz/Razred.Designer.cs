@@ -88,7 +88,6 @@ namespace Kviz
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Razred";
             this.Text = "Razred";
-            this.Load += new System.EventHandler(this.Razred_Load);
             this.ResumeLayout(false);
 
         }

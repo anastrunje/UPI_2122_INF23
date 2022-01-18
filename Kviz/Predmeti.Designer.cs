@@ -76,7 +76,6 @@ namespace Kviz
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Predmeti";
             this.Text = "Predmeti";
-            this.Load += new System.EventHandler(this.Predmeti_Load);
             this.ResumeLayout(false);
 
         }

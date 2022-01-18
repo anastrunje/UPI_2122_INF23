@@ -32,15 +32,14 @@ namespace Kviz
             this.btnObjasnjenja = new System.Windows.Forms.Button();
             this.btnPokreni = new System.Windows.Forms.Button();
             this.btnBodovi = new System.Windows.Forms.Button();
-            this.btnOdigrani = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnObjasnjenja
             // 
-            this.btnObjasnjenja.Location = new System.Drawing.Point(85, 55);
-            this.btnObjasnjenja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnObjasnjenja.Location = new System.Drawing.Point(64, 45);
+            this.btnObjasnjenja.Margin = new System.Windows.Forms.Padding(2);
             this.btnObjasnjenja.Name = "btnObjasnjenja";
-            this.btnObjasnjenja.Size = new System.Drawing.Size(131, 48);
+            this.btnObjasnjenja.Size = new System.Drawing.Size(98, 39);
             this.btnObjasnjenja.TabIndex = 0;
             this.btnObjasnjenja.Text = "OBJAŠNJENJA GRADIVA";
             this.btnObjasnjenja.UseVisualStyleBackColor = true;
@@ -48,10 +47,10 @@ namespace Kviz
             // 
             // btnPokreni
             // 
-            this.btnPokreni.Location = new System.Drawing.Point(85, 274);
-            this.btnPokreni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPokreni.Location = new System.Drawing.Point(64, 223);
+            this.btnPokreni.Margin = new System.Windows.Forms.Padding(2);
             this.btnPokreni.Name = "btnPokreni";
-            this.btnPokreni.Size = new System.Drawing.Size(131, 48);
+            this.btnPokreni.Size = new System.Drawing.Size(98, 39);
             this.btnPokreni.TabIndex = 1;
             this.btnPokreni.Text = "POKRENI KVIZ";
             this.btnPokreni.UseVisualStyleBackColor = true;
@@ -59,37 +58,26 @@ namespace Kviz
             // 
             // btnBodovi
             // 
-            this.btnBodovi.Location = new System.Drawing.Point(85, 201);
-            this.btnBodovi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBodovi.Location = new System.Drawing.Point(64, 130);
+            this.btnBodovi.Margin = new System.Windows.Forms.Padding(2);
             this.btnBodovi.Name = "btnBodovi";
-            this.btnBodovi.Size = new System.Drawing.Size(131, 48);
+            this.btnBodovi.Size = new System.Drawing.Size(98, 39);
             this.btnBodovi.TabIndex = 2;
             this.btnBodovi.Text = "BODOVNO STANJE";
             this.btnBodovi.UseVisualStyleBackColor = true;
-            // 
-            // btnOdigrani
-            // 
-            this.btnOdigrani.Location = new System.Drawing.Point(85, 127);
-            this.btnOdigrani.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnOdigrani.Name = "btnOdigrani";
-            this.btnOdigrani.Size = new System.Drawing.Size(131, 48);
-            this.btnOdigrani.TabIndex = 3;
-            this.btnOdigrani.Text = "ODIGRANI KVIZOVI";
-            this.btnOdigrani.UseVisualStyleBackColor = true;
+            this.btnBodovi.Click += new System.EventHandler(this.btnBodovi_Click);
             // 
             // Izbornik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 386);
-            this.Controls.Add(this.btnOdigrani);
+            this.ClientSize = new System.Drawing.Size(232, 314);
             this.Controls.Add(this.btnBodovi);
             this.Controls.Add(this.btnPokreni);
             this.Controls.Add(this.btnObjasnjenja);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Izbornik";
             this.Text = "Izbornik";
-            this.Load += new System.EventHandler(this.Izbornik_Load);
             this.ResumeLayout(false);
 
         }
@@ -99,6 +87,5 @@ namespace Kviz
         private System.Windows.Forms.Button btnObjasnjenja;
         private System.Windows.Forms.Button btnPokreni;
         private System.Windows.Forms.Button btnBodovi;
-        private System.Windows.Forms.Button btnOdigrani;
     }
 }

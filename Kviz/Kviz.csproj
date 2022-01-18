@@ -47,23 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algebarski.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Algebarski.Designer.cs">
-      <DependentUpon>Algebarski.cs</DependentUpon>
-    </Compile>
     <Compile Include="Brojevi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Brojevi.Designer.cs">
       <DependentUpon>Brojevi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Potencije.cs">
+    <Compile Include="Brojevi_Objasnjenje.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Potencije.Designer.cs">
-      <DependentUpon>Potencije.cs</DependentUpon>
+    <Compile Include="Brojevi_Objasnjenje.Designer.cs">
+      <DependentUpon>Brojevi_Objasnjenje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kraj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kraj.Designer.cs">
+      <DependentUpon>Kraj.cs</DependentUpon>
     </Compile>
     <Compile Include="Predmeti.cs">
       <SubType>Form</SubType>
@@ -102,14 +102,20 @@
     <Compile Include="PrviMatObj.Designer.cs">
       <DependentUpon>PrviMatObj.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rang.Designer.cs">
+      <DependentUpon>Rang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Razred.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Razred.Designer.cs">
       <DependentUpon>Razred.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Algebarski.resx">
-      <DependentUpon>Algebarski.cs</DependentUpon>
+    <EmbeddedResource Include="Brojevi_Objasnjenje.resx">
+      <DependentUpon>Brojevi_Objasnjenje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Izbornik.resx">
       <DependentUpon>Izbornik.cs</DependentUpon>
@@ -117,8 +123,8 @@
     <EmbeddedResource Include="Brojevi.resx">
       <DependentUpon>Brojevi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Potencije.resx">
-      <DependentUpon>Potencije.cs</DependentUpon>
+    <EmbeddedResource Include="Kraj.resx">
+      <DependentUpon>Kraj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Predmeti.resx">
       <DependentUpon>Predmeti.cs</DependentUpon>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrviMatObj.resx">
       <DependentUpon>PrviMatObj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rang.resx">
+      <DependentUpon>Rang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Razred.resx">
       <DependentUpon>Razred.cs</DependentUpon>
@@ -179,6 +188,8 @@
   <ItemGroup>
     <Content Include="pitanja.txt" />
     <Content Include="proba.txt" />
+    <None Include="Resources\objasnjenje2.PNG" />
+    <None Include="Resources\obj1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

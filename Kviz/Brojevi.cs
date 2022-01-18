@@ -1,98 +1,62 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Kviz
 {
     public partial class Brojevi : Form
     {
+        private void GenerirajPitanja(Image slika, string[] pitanje, int redni_br)
+        {
+            //pitanje je sastavljeno kao: tekst pitanja, prvi odg., drugi odg., treci odg., cetvrti odg.
+            lblPitanje.Text = pitanje[0];
+            pbxPitanje.Image = slika;
+            rbtTreci.Text = pitanje[1];
+            rbtPrvi.Text = pitanje[2];
+            rbtDrugi.Text = pitanje[3];
+            rbtCetvrti.Text = pitanje[4];
+            lblBrojzadatka.Text = String.Format("{0}. Zadatak", redni_br.ToString());
+        }
+
         public Brojevi()
         {
             InitializeComponent();
         }
 
         int brojPitanja = 0;
-        int bodovi = 0;
+        public static int bodovi = 0;
+        int[] arr = { 0, 1, 2, 3, 4 }; //za random shufflanje poretka pitanja
+
+        //slike koje se učitavaju u picturebox u istom poretku kao i pitanja u .txt fileu
+        Image[] slike = { Properties.Resources.brojevnipravac1, Properties.Resources.brojevnipravac2, Properties.Resources.brojevi, Properties.Resources.brojevi3, Properties.Resources.brojevi4 };
+        string[] pitanja = File.ReadAllLines("proba.txt"); //iščitavanje pitanja iz .txt filea u array
+        string[] pitanje;
 
         private void Brojevi_Load(object sender, EventArgs e)
         {
+            lblBodovi.Text = "";
+
+            //mijenjanje boja buttona ovisno o tome može li se pritisnuti
             btnProvjeri.Enabled = true;
             btnProvjeri.BackColor = Color.Green;
             btnSljedece.Enabled = false;
             btnSljedece.BackColor = Color.Red;
+
             brojPitanja++;
 
-            /*if (brojPitanja == 1)
-            {
-                label1.Text = "Koji je broj označen na ovom brojevnom pravcu?";
-                pbxPitanje.Image = Properties.Resources.brojevnipravac1;
-                rbtTreci.Text = "-7";
-                rbtPrvi.Text = "7/2";
-                rbtDrugi.Text = "6/5";
-                rbtCetvrti.Text = "-2.5";
-                lblBrojzadatka.Text = "1.Zadatak";
-            }
-            else if (brojPitanja == 2)
-            {
-                label1.Text = "Koji je broj označen na ovom brojevnom pravcu?";
-                pbxPitanje.Image = Properties.Resources.brojevnipravac2;
-                rbtTreci.Text = "-2.5";
-                rbtPrvi.Text = "6/5";
-                rbtDrugi.Text = "7/2";
-                rbtCetvrti.Text = "6";
-                lblBrojzadatka.Text = "2.Zadatak";
-            }
-            else if (brojPitanja == 3)
-            {
-                label1.Text = "Odaberi točan odgovor.";
-                pbxPitanje.Image = Properties.Resources.brojevi;
-                rbtTreci.Text = "0";
-                rbtPrvi.Text = "4/5";
-                rbtDrugi.Text = "0.8";
-                rbtCetvrti.Text = "2/3";
-                lblBrojzadatka.Text = "3.Zadatak";
-            }
-            else if (brojPitanja == 4)
-            {
-                label1.Text = "Odredite skup A.";
-                pbxPitanje.Image = Properties.Resources.brojevi3;
-                rbtTreci.Text = "{3, 6, 9, 12, 15, 18}";
-                rbtPrvi.Text = "{3, 9, 18}";
-                rbtDrugi.Text = "{1,3}";
-                rbtCetvrti.Text = "{9, 18}";
-                lblBrojzadatka.Text = "4.Zadatak";
-            }
-            else if (brojPitanja == 5)
-            {
-                label1.Text = "Odredite skup B";
-                pbxPitanje.Image = Properties.Resources.brojevi4;
-                rbtTreci.Text = "{2, 4, 6, 8, 10, 12, 14, 16, 18}";
-                rbtPrvi.Text = "{2, 4, 16}";
-                rbtDrugi.Text = "{1, 2}";
-                rbtCetvrti.Text = "{2, 4, 6, 10}";
-                lblBrojzadatka.Text = "5.Zadatak";
-            }*/
-
-            int[] arr = { 0, 1 }; //{ 0, 1, 2, 3, 4 };
+            /*pošto ne želimo ponavljanje pitanja, napravljen je array iste veličine kao i broj pitanja
+            te će se brojevi u arrayu koristiti za generiranje određenog pitanja.
+            npr. ako se shuffle-a iz [0,1,2,3,4] u [3,0,2,4,1], onda ćemo za indeks 1. pitanja koje 
+            je generirano koristiti arr[0](=3), a ne samo 0*/
             Random random = new Random();
             arr = arr.OrderBy(x => random.Next()).ToArray();
 
-            string[] pitanja = File.ReadAllLines("proba.txt");
-            string[] pitanje;
+            pitanje = pitanja[arr[brojPitanja - 1]].Split(';');
 
-            if (brojPitanja==1)
-            {
-                pitanje = pitanja[arr[brojPitanja - 1]].Split(';');
-                lblPitanje.Text = pitanje[0];
-                //pbxPitanje.Image = Image.FromFile(pitanje[1]);
-            }
+            GenerirajPitanja(slike[arr[brojPitanja - 1]], pitanje, brojPitanja);
 
         }
         private void btnSljedece_Click(object sender, EventArgs e)
@@ -103,55 +67,20 @@ namespace Kviz
             btnSljedece.BackColor = Color.Red;
 
             brojPitanja++;
-            if (brojPitanja == 1)
+
+            if (brojPitanja < 6)
             {
-                lblPitanje.Text = "Koji je broj označen na ovom brojevnom pravcu?";
-                pbxPitanje.Image = Properties.Resources.brojevnipravac1;
-                rbtTreci.Text = "-7";
-                rbtPrvi.Text = "7/2";
-                rbtDrugi.Text = "6/5";
-                rbtCetvrti.Text = "-2.5";
-                lblBrojzadatka.Text = "1.Zadatak";
+                pitanje = pitanja[arr[brojPitanja - 1]].Split(';');
+                GenerirajPitanja(slike[arr[brojPitanja - 1]], pitanje, brojPitanja);
             }
-            else if (brojPitanja == 2)
+            else
             {
-                lblPitanje.Text = "Koji je broj označen na ovom brojevnom pravcu?";
-                pbxPitanje.Image = Properties.Resources.brojevnipravac2;
-                rbtTreci.Text = "-2.5";
-                rbtPrvi.Text = "6/5";
-                rbtDrugi.Text = "7/2";
-                rbtCetvrti.Text = "6";
-                lblBrojzadatka.Text = "2.Zadatak";
-            }
-            else if (brojPitanja == 3)
-            {
-                lblPitanje.Text = "Odaberi točan odgovor.";
-                pbxPitanje.Image = Properties.Resources.brojevi;
-                rbtTreci.Text = "0";
-                rbtPrvi.Text = "4/5";
-                rbtDrugi.Text = "0.8";
-                rbtCetvrti.Text = "2/3";
-                lblBrojzadatka.Text = "3.Zadatak";
-            }
-            else if (brojPitanja == 4)
-            {
-                lblPitanje.Text = "Odredite skup A.";
-                pbxPitanje.Image = Properties.Resources.brojevi3;
-                rbtTreci.Text = "{3, 6, 9, 12, 15, 18}";
-                rbtPrvi.Text = "{3, 9, 18}";
-                rbtDrugi.Text = "{1,3}";
-                rbtCetvrti.Text = "{9, 18}";
-                lblBrojzadatka.Text = "4.Zadatak";
-            }
-            else if (brojPitanja == 5)
-            {
-                lblPitanje.Text = "Odredite skup B";
-                pbxPitanje.Image = Properties.Resources.brojevi4;
-                rbtTreci.Text = "{2, 4, 6, 8, 10, 12, 14, 16, 18}";
-                rbtPrvi.Text = "{2, 4, 16}";
-                rbtDrugi.Text = "{1, 2}";
-                rbtCetvrti.Text = "{2, 4, 6, 10}";
-                lblBrojzadatka.Text = "5.Zadatak";
+                string unos = FormaPrijava.korisnickoIme + ";" + bodovi;
+                File.AppendAllText("rang_lista.txt", unos + Environment.NewLine);
+
+                Kraj kraj = new Kraj();
+                this.Hide();
+                kraj.ShowDialog();
             }
         }
 
@@ -162,35 +91,36 @@ namespace Kviz
             btnSljedece.Enabled = true;
             btnSljedece.BackColor = Color.Green;
 
-            if(brojPitanja==1)
+            //provjera točnosti odgovora
+            if (lblPitanje.Text == "Koji je broj označen na brojevnom pravcu?")
             {
-                if (rbtPrvi.Checked)
+                if (rbtTreci.Checked)
                     bodovi++;
-                lblBodovi.Text = "Broj bodova" + bodovi;
+                lblBodovi.Text = "Broj bodova: " + bodovi;
             }
-            if (brojPitanja == 2)
+            else if (lblPitanje.Text == "Koji je broj označen na ovom brojevnom pravcu?")
             {
                 if (rbtDrugi.Checked)
                     bodovi++;
-                lblBodovi.Text = "Broj bodova" + bodovi;
+                lblBodovi.Text = "Broj bodova: " + bodovi;
             }
-            if (brojPitanja == 3)
+            else if (lblPitanje.Text == "Odaberi točan odgovor.")
             {
                 if (rbtTreci.Checked)
                     bodovi++;
-                lblBodovi.Text = "Broj bodova" + bodovi;
+                lblBodovi.Text = "Broj bodova: " + bodovi;
             }
-            if (brojPitanja == 4)
+            else if (lblPitanje.Text == "Odredite skup A.")
             {
                 if (rbtTreci.Checked)
                     bodovi++;
-                lblBodovi.Text = "Broj bodova" + bodovi;
+                lblBodovi.Text = "Broj bodova: " + bodovi;
             }
-            if (brojPitanja == 5)
+            else if (lblPitanje.Text == "Odredite skup B.")
             {
                 if (rbtTreci.Checked)
                     bodovi++;
-                lblBodovi.Text = "Broj bodova" + bodovi;
+                lblBodovi.Text = "Broj bodova: " + bodovi;
             }
         }
 
@@ -200,11 +130,9 @@ namespace Kviz
             if (odg.ToString() == "Yes")
             {
                 PrviMat prvimat = new PrviMat();
-                prvimat.Show();
                 this.Hide();
+                prvimat.ShowDialog();
             }
-              
-            
         }
     }
 }
