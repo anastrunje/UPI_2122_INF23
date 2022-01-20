@@ -1,0 +1,10 @@
+ana;5
+mate;4
+tina;2
+patricija;3
+šime;2
+ante;4
+anastrunje;3
+anastrunje;5
+anastrunje;5
+anastrunje;2

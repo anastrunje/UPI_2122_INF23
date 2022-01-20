@@ -1,0 +1,3 @@
+Matematičkim simbolima zapisujemo A∩B = {x : x∈A i x∈B}.;Properties.Resources.obj1
+Matija, Ana, Darija i Nina članovi su istoga odbojkaškog kluba. Oni čine skup O ,O={Matija, Ana, Darija, Nina}.Nogometom se bave Ivan, Krešo, Boris i Tvrtko, tj. N={Ivan,Krešo,Boris,Tvrtko}.Postoji li u toj skupini osoba koja trenira i nogomet i odbojku?;Properties.Resources.objasnjenje2
+Neka je A={1,2,3},B={1,2,3,4,5,6,7,8,9}.Je li A⊆B ili je B⊆A. Svaki je element iz skupa A element skupa B pa vrijedi {1,2,3}⊆{1,2,3,4,5,6,7,8,9} ili A⊆B.;Properties.Resources.brojeviobj3

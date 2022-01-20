@@ -1,0 +1,42 @@
+﻿"Koji je broj označen na ovom brojevnom pravcu?";Properties.Resources.brojevnipravac1;"-7";"7/2";"6/5";"-2.5";"1.Zadatak"
+
+string[] pitanja= p.split('');
+label1.Text, pbx.Image, rbtTreci.Text,...... = pitanja[brojac-1].split(';');
+brojac++;
+
+
+
+label1.Text = "Koji je broj označen na ovom brojevnom pravcu?";
+pictureBox1.Image = Properties.Resources.brojevnipravac2;
+rbtTreci.Text = "-2.5";
+rbtPrvi.Text = "6/5";
+rbtDrugi.Text = "7/2";
+rbtCetvrti.Text = "6";
+lblBrojzadatka.Text = "2.Zadatak";
+
+
+label1.Text = "Odaberi točan odgovor.";
+pictureBox1.Image = Properties.Resources.brojevi;
+rbtTreci.Text = "0";
+rbtPrvi.Text = "4/5";
+rbtDrugi.Text = "0.8";
+rbtCetvrti.Text = "2/3";
+lblBrojzadatka.Text = "3.Zadatak";
+
+
+label1.Text = "Odredite skup A.";
+pictureBox1.Image = Properties.Resources.brojevi3;
+rbtTreci.Text = "{3, 6, 9, 12, 15, 18}";
+rbtPrvi.Text = "{3, 9, 18}";
+rbtDrugi.Text = "{1,3}";
+rbtCetvrti.Text = "{9, 18}";
+lblBrojzadatka.Text = "4.Zadatak";
+
+
+label1.Text = "Odredite skup B";
+                pictureBox1.Image = Properties.Resources.brojevi4;
+                rbtTreci.Text = "{2, 4, 6, 8, 10, 12, 14, 16, 18}";
+                rbtPrvi.Text = "{2, 4, 16}";
+                rbtDrugi.Text = "{1, 2}";
+                rbtCetvrti.Text = "{2, 4, 6, 10}";
+                lblBrojzadatka.Text = "5.Zadatak";
