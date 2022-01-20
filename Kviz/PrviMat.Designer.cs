@@ -191,7 +191,6 @@ namespace Kviz
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PrviMat";
             this.Text = "PrviMatcs";
-            this.Load += new System.EventHandler(this.PrviMat_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

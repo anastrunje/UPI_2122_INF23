@@ -127,10 +127,19 @@
   <data name="brojevi4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brojevi4.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="brojeviobj3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brojeviobj3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="brojevnipravac1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brojevnipravac1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="brojevnipravac2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brojevnipravac2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="obj1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\obj1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="objasnjenje2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\objasnjenje2.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

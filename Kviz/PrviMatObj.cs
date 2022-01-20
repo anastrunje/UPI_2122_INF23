@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kviz
@@ -17,59 +10,17 @@ namespace Kviz
             InitializeComponent();
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void btnObj_Click(object sender, EventArgs e)
         {
-
+            Brojevi_Objasnjenje brobj = new Brojevi_Objasnjenje();
+            this.Hide();
+            brobj.ShowDialog();
+            this.Show();
         }
 
-        private void rbtnSukladnost_CheckedChanged(object sender, EventArgs e)
+        private void btnIzlaz_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void rbtnSustav_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtnLinearna_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtnTrigo_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtnAlgebarski_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtnUredaj_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtnPotencije_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtnBrojevi_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtnPodaci_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

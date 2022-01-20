@@ -68,7 +68,7 @@ namespace Kviz
             this.lozinkaTxt.Name = "lozinkaTxt";
             this.lozinkaTxt.Size = new System.Drawing.Size(175, 22);
             this.lozinkaTxt.TabIndex = 3;
-            this.lozinkaTxt.Click += new System.EventHandler(this.lozinkaTxt_Click);
+            this.lozinkaTxt.UseSystemPasswordChar = true;
             // 
             // prijavaBtn
             // 
